@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Drag and Drop</title>
+</head>
+
+<body>
+    <div class="app-container">
+        <div id="device" class="device">
+            <div id="device-screen" class="device-screen"></div>
+        </div>
+        <div id="components" class="components-panel">
+            <div id="textComponent" class="component" draggable="true" ondragstart="startDrag(event)">
+                <img src="./Assets/text-ic.png" alt="Text Icon">
+                <span>Text Component</span>
+            </div>
+            <div id="phoneComponent" class="component" draggable="true" ondragstart="startDrag(event)">
+                <img src="./Assets/phone-ic.png" alt="Phone Icon">
+                <span>Phone Component</span>
+            </div>
+            <div id="emailComponent" class="component" draggable="true" ondragstart="startDrag(event)">
+                <img src="./Assets/email-ic.png" alt="Email Icon">
+                <span>Email Component</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

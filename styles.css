@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.app-container {
+  display: flex;
+  gap: 20px;
+}
+
+.device {
+  background-image: url("./Assets/ipad-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  aspect-ratio: 1527/1992;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.device-screen {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.device-screen::-webkit-scrollbar {
+  width: 8px;
+}
+
+.device-screen::-webkit-scrollbar-thumb {
+  background-color: #4caf50; 
+  border-radius: 10px;
+}
+
+.device-screen::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+.components-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.component {
+  display: flex;
+  cursor: move;
+}
+
+.component img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.input-component {
+  padding: 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-component .icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+}
+
+.input-component input {
+  padding: 10px;
+  width: calc(100% - 45px);
+  padding-left: 35px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.input-component input:focus {
+  border-color: #4caf50;
+}
+
+.input-component .remove-icon {
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 16px;
+  color: #ff0000;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .device {
+    background-image: url("./Assets/phone-bg.png");
+    aspect-ratio: 315/636;
+    width: 300px;
+  }
+  .components-panel {
+    display: none;
+  }
+}
